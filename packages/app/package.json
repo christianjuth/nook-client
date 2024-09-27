@@ -10,7 +10,7 @@
     "@nook/app-ui": "*",
     "@nook/common": "*",
     "@privy-io/expo": "^0.15.1",
-    "@privy-io/react-auth": "^1.60.6",
+    "@privy-io/react-auth": "^1.87.0",
     "@privy-io/wagmi": "^0.2.2",
     "@rainbow-me/rainbowkit": "^2.1.1",
     "@shopify/flash-list": "^1.6.3",

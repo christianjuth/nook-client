@@ -109,6 +109,7 @@ export const submitReactionRemove = async (
 export const submitUserDataAdd = async (
   req: SubmitUserDataAddRequest,
 ): Promise<SubmitMessageResponse | SubmitMessageError> => {
+  console.log("I AM NOW HERE")
   const response = await makeRequest("/signer/user-data-add", {
     method: "POST",
     headers: {

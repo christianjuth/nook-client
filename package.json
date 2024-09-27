@@ -23,9 +23,12 @@
     "dev:farcaster:api": " nodemon --exec 'yarn workspace @nook/farcaster-api dev' --config ./packages/farcaster-api/nodemon.json",
     "dev:nft:api": "nodemon --exec 'yarn workspace @nook/nft-api dev' --config ./packages/nft-api/nodemon.json",
     "native": "cd apps/expo && yarn start",
-    "next": "yarn workspace @nook/next dev"
+    "next": "turbo dev --filter=@nook/next --filter=@nook/farcaster-api --filter=@nook/content-api --filter=@nook/signer-api --filter=@nook/notifications-api --filter=@nook/list-api --filter=@nook/api"
   },
-  "workspaces": ["apps/*", "packages/*"],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
     "@types/node": "^20.11.14",
@@ -37,5 +40,9 @@
   "resolutions": {
     "@swc/core": "1.5.7",
     "valtio": "1.11.2"
-  }
+  },
+  "dependencies": {
+    "turbo": "^2.1.2"
+  },
+  "packageManager": "yarn@4.5.0"
 }

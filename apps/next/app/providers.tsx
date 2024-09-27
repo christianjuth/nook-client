@@ -68,7 +68,8 @@ const PrivyLoginProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <PrivyProvider
-      appId="clsnxqma102qxbyt1ght4j14w"
+      appId="cm1jvb01r03lmqwb292sv3v61"
+      clientId="client-WY5bqR95tgfJFXnxfxKMNdQFKvY6TSsLzRCTptyp6YPUw"
       config={{
         appearance: { logo: "", theme: "dark" },
         loginMethods,

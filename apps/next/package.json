@@ -13,7 +13,7 @@
     "@amplitude/analytics-browser": "^2.6.2",
     "@nook/app": "*",
     "@nook/common": "*",
-    "@privy-io/react-auth": "^1.60.6",
+    "@privy-io/react-auth": "^1.87.0",
     "@privy-io/wagmi": "^0.2.2",
     "@tamagui/config": "^1.97.0",
     "@tamagui/lucide-icons": "^1.97.0",

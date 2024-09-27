@@ -1,0 +1,21 @@
+version: '3'
+services:
+  redis:
+    image: redis:latest
+    container_name: redis-cache
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_PASSWORD=yourpassword
+    command: redis-server --requirepass yourpassword
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: farcaster
+    ports:
+      - "5432:5432"
+

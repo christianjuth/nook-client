@@ -107,7 +107,7 @@ function RootLayoutNav() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <WagmiProvider config={wagmiConfig}>
         <QueryClientProvider client={queryClient}>
-          <PrivyProvider appId={"clsnxqma102qxbyt1ght4j14w"}>
+          <PrivyProvider appId={"cm1jvb01r03lmqwb292sv3v61"}>
             <AuthProvider>
               <ThemeProvider>
                 <SafeAreaProvider>
