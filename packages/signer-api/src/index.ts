@@ -5,7 +5,16 @@ import fastifyJwt from "@fastify/jwt";
 
 const buildApp = () => {
   const app = fastify({
-    logger: true,
+    logger: {
+      transport: {
+        target: 'pino-pretty',
+        options: {
+          translateTime: true,
+          colorize: true,
+          levelFirst: true,
+        }
+      },
+    },
     ajv: {
       customOptions: {
         allowUnionTypes: true,

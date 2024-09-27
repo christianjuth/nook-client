@@ -9,7 +9,16 @@ async function getSwap() {
   console.log("getting swap");
   const now = new Date();
   const app = fastify({
-    logger: true,
+    logger: {
+      transport: {
+        target: 'pino-pretty',
+        options: {
+          translateTime: true,
+          colorize: true,
+          levelFirst: true,
+        }
+      },
+    },
     ajv: {
       customOptions: {
         allowUnionTypes: true,
