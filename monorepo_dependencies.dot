@@ -1,0 +1,20 @@
+digraph monorepo_dependencies {
+    "@nook/app" -> "@nook/app-ui";
+    "@nook/app" -> "@nook/common";
+    "@nook/signer-api" -> "@nook/common";
+    "@nook/content-api" -> "@nook/common";
+    "@nook/list-api" -> "@nook/common";
+    "@nook/scheduler" -> "@nook/common";
+    "@nook/notifications-api" -> "@nook/common";
+    "@nook/dashboard" -> "@nook/common";
+    "@nook/farcaster" -> "@nook/common";
+    "@nook/farcaster-api" -> "@nook/common";
+    "@nook/api" -> "@nook/common";
+    "@nook/events" -> "@nook/common";
+    "@nook/notifications" -> "@nook/common";
+    "@nook/next" -> "@nook/app";
+    "@nook/next" -> "@nook/common";
+    "@nook/expo" -> "@nook/app";
+    "@nook/expo" -> "@nook/app-ui";
+    "@nook/expo" -> "@nook/common";
+}
