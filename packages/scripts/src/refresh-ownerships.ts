@@ -16,6 +16,7 @@ const run = async () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            'x-service-name': "@nook/scripts",
           },
           body: JSON.stringify({
             collectionId,
@@ -29,6 +30,7 @@ const run = async () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            'x-service-name': "@nook/scripts",
           },
           body: JSON.stringify({
             nftId,
@@ -42,6 +44,7 @@ const run = async () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            'x-service-name': "@nook/scripts",
           },
           body: JSON.stringify({
             tokenId,

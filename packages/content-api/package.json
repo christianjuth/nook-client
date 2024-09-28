@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/src/index.js",
-    "dev": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts | yarn pino-pretty",
     "start:manual": "tsc && node dist/src/manual.js",
     "refresh-embeds": "ts-node src/refresh-embeds.ts",
     "start:worker": "ts-node src/worker.ts"
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
+    "pino-pretty": "^11.2.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }

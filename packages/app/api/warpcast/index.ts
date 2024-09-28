@@ -12,6 +12,11 @@ export const getFarcasterActions = async (
     `https://api.warpcast.com/v2/discover-actions?list=top&limit=25${
       cursor ? `&cursor=${cursor}` : ""
     }`,
+    {
+      headers: {
+        'x-service-name': "@nook/app",
+      }
+    }
   );
 
   const data: {
@@ -49,6 +54,11 @@ export const getFarcasterActions = async (
 export const fetchCurrentFnameTransfer = async (fname: string) => {
   const response = await fetch(
     `https://fnames.farcaster.xyz/transfers/current?name=${fname}`,
+    {
+      headers: {
+        'x-service-name': "@nook/app",
+      }
+    }
   );
 
   if (!response.ok) {
@@ -65,6 +75,11 @@ export const fetchCurrentFnameTransfer = async (fname: string) => {
 export const fetchCurrentFnameTransferByFid = async (fid: string) => {
   const response = await fetch(
     `https://fnames.farcaster.xyz/transfers/current?fid=${fid}`,
+    {
+      headers: {
+        'x-service-name': "@nook/app",
+      }
+    }
   );
 
   if (!response.ok) {
@@ -83,6 +98,7 @@ export const submitFnameTransfer = async (transfer: SubmitFnameTransfer) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      'x-service-name': "@nook/app",
     },
     body: JSON.stringify(transfer),
   });

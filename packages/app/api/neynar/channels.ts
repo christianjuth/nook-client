@@ -11,6 +11,7 @@ export const getUserHighlights = async (
         headers: {
           "Content-Type": "application/json",
           api_key: process.env.NEYNAR_API_KEY as string,
+          'x-service-name': "@nook/app",
         },
       },
     );

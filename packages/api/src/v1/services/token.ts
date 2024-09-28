@@ -596,6 +596,7 @@ export class TokenService {
       headers: {
         accept: "application/json",
         authorization: `Basic ${ZERION_API_KEY}`,
+        'x-service-name': "@nook/api",
       },
     });
     if (!response.ok) {
@@ -614,6 +615,7 @@ export class TokenService {
       headers: {
         accept: "application/json",
         "X-API-KEY": SIMPLEHASH_API_KEY,
+        'x-service-name': "@nook/api",
       },
     });
     if (!response.ok) {

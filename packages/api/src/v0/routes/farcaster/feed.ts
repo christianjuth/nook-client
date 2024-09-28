@@ -32,6 +32,11 @@ export const farcasterFeedRoutes = async (fastify: FastifyInstance) => {
               `${request.body.api}${
                 request.body.cursor ? `?offset=${request.body.cursor}` : ""
               }`,
+              {
+                headers: {
+                  'x-service-name': "@nook/api"
+                }
+              }
             );
             if (!response.ok) {
               console.error(await response.text());
@@ -96,6 +101,7 @@ export const farcasterFeedRoutes = async (fastify: FastifyInstance) => {
                 headers: {
                   accept: "application/json",
                   api_key: process.env.NEYNAR_API_KEY as string,
+                  'x-service-name': "@nook/api",
                 },
               },
             );
@@ -115,6 +121,7 @@ export const farcasterFeedRoutes = async (fastify: FastifyInstance) => {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
+              'x-service-name': "@nook/api",
             },
             body: JSON.stringify({
               ...request.body,

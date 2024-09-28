@@ -37,6 +37,7 @@ export const getWarpcastDeeplink = async (key: `0x${string}`) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      'x-service-name': "@nook/signer-api",
     },
     body: JSON.stringify({
       key,
@@ -68,6 +69,11 @@ export const getWarpcastDeeplink = async (key: `0x${string}`) => {
 export const validateSignerRegistration = async (token: string) => {
   const response = await fetch(
     `${WARPCAST_API_URL}/signed-key-request?token=${token}`,
+    {
+      headers: {
+        'x-service-name': "@nook/signer-api",
+      }
+    }
   );
 
   if (!response.ok) {
