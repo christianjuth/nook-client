@@ -1,0 +1,6 @@
+{
+  "colorize": true,
+  "translateTime": "HH:MM:ss",
+  "messageFormat": "{serviceName}{if req}<–– {req.method} {req.url}{end}{if res}––> {res.statusCode}{end}",
+  "singleLine": true
+}

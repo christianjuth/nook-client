@@ -6,16 +6,7 @@ import { swapRoutes } from "./routes";
 
 const buildApp = () => {
   const app = fastify({
-    logger: {
-      transport: {
-        target: 'pino-pretty',
-        options: {
-          translateTime: true,
-          colorize: true,
-          levelFirst: true,
-        }
-      },
-    },
+    logger: true,
     ajv: {
       customOptions: {
         allowUnionTypes: true,
