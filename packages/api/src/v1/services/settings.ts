@@ -213,7 +213,11 @@ export class SettingsService {
 
     if (!action) {
       try {
-        const response = await fetch(request.url);
+        const response = await fetch(request.url, {
+          headers: {
+            'x-service-name': "@nook/api",
+          }
+        });
         const {
           name,
           icon,

@@ -134,7 +134,10 @@ const fetchUrlMetadata = async (url: string) => {
 
   const res = await Promise.race([
     fetch(url, {
-      headers: requestHeaders,
+      headers: {
+        ...requestHeaders,
+        'x-service-name': "@nook/content-api",
+      },
     }) as Promise<Response>,
     new Promise((_, reject) =>
       setTimeout(() => reject(new Error("Timed out getting frame")), 20000),

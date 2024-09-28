@@ -3,7 +3,11 @@ import { PrismaClient } from "@nook/common/prisma/farcaster";
 const run = async () => {
   const client = new PrismaClient();
 
-  const response = await fetch("https://api.warpcast.com/v2/all-channels");
+  const response = await fetch("https://api.warpcast.com/v2/all-channels", {
+    headers: {
+      'x-service-name': "@nook/farcaster",
+    }
+  });
   if (!response.ok) {
     return;
   }

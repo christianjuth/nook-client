@@ -52,6 +52,7 @@ export const frameRoutes = async (fastify: FastifyInstance) => {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
+              'x-service-name': "@nook/api",
             },
             redirect:
               request.body.action === "post_redirect" ? "manual" : undefined,

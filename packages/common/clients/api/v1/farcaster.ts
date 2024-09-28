@@ -15,11 +15,6 @@ import { BaseAPIClient } from "../base";
 export class FarcasterAPIV1Client extends BaseAPIClient {
   API_ENDPOINT = `${process.env.FARCASTER_API_ENDPOINT}/v1`;
 
-  constructor() {
-    super();
-    console.log(`Initalizing ${this.API_ENDPOINT}`)
-  }
-
   async getChannel(id: string, viewerFid?: string): Promise<Channel> {
     const response = await this.makeRequest(`/channels/${id}`, { viewerFid });
 

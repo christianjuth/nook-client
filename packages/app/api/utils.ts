@@ -37,7 +37,10 @@ export const makeUrlRequest = async (
 
   const response = await fetch(url, {
     ...requestInit,
-    headers,
+    headers: {
+      'x-service-name': "@nook/app",
+      ...requestInit?.headers,
+    },
   });
 
   if (response.status === 404) {

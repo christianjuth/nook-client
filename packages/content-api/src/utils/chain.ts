@@ -112,6 +112,7 @@ const handleNftContract = async (
       headers: {
         "X-API-KEY": process.env.SIMPLEHASH_API_KEY as string,
         accept: "application/json",
+        'x-service-name': "@nook/content-api",
       },
     },
   );
@@ -137,6 +138,7 @@ const handleNftToken = async (asset: Asset): Promise<NFT | undefined> => {
       headers: {
         "X-API-KEY": process.env.SIMPLEHASH_API_KEY as string,
         accept: "application/json",
+        'x-service-name': "@nook/content-api",
       },
     },
   );

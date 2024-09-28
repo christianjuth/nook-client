@@ -1036,6 +1036,11 @@ export class FarcasterService {
       ) {
         const response = await fetch(
           "https://api.warpcast.com/v2/all-channels",
+          {
+            headers: {
+              'x-service-name': "@nook/farcaster-api",
+            }
+          }
         );
         const data = await response.json();
         const channelsFromWarpcast: {

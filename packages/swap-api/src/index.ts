@@ -6,21 +6,21 @@ import { swapRoutes } from "./routes";
 
 const buildApp = () => {
   const app = fastify({
-    logger: {
-      transport: {
-        target: 'pino-pretty',
-        options: {
-          translateTime: true,
-          colorize: true,
-          levelFirst: true,
-        }
-      },
-    },
+    logger: true,
     ajv: {
       customOptions: {
         allowUnionTypes: true,
       },
     },
+  });
+
+  // Add a hook to listen for incoming requests and log the X-Service-Name header if present
+  app.addHook('onRequest', (request, reply, done) => {
+    const serviceName = request.headers['x-service-name'];
+    if (serviceName) {
+      app.log.info({ serviceName: `Request from: ${serviceName}` });
+    }
+    done();
   });
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

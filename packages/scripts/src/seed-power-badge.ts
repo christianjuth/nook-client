@@ -3,7 +3,11 @@ import { FarcasterCacheClient, RedisClient } from "@nook/common/clients";
 export const run = async () => {
   const client = new FarcasterCacheClient(new RedisClient());
 
-  const response = await fetch("https://api.warpcast.com/v2/power-badge-users");
+  const response = await fetch("https://api.warpcast.com/v2/power-badge-users", {
+    headers: {
+      'x-service-name': "@nook/scripts",
+    }
+  });
 
   if (!response.ok) {
     throw new Error(response.statusText);

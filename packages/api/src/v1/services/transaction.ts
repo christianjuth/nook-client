@@ -444,6 +444,7 @@ export class TransactionService {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        'x-service-name': "@nook/api",
       },
       body: JSON.stringify(body),
     });
@@ -465,6 +466,7 @@ export class TransactionService {
       headers: {
         accept: "application/json",
         "X-API-KEY": SIMPLEHASH_API_KEY,
+        'x-service-name': "@nook/api",
       },
     });
     if (!response.ok) {
@@ -483,6 +485,7 @@ export class TransactionService {
       headers: {
         accept: "application/json",
         authorization: `Basic ${ZERION_API_KEY}`,
+        'x-service-name': "@nook/api",
       },
     });
     if (!response.ok) {
@@ -517,6 +520,7 @@ export class TransactionService {
       headers: {
         accept: "application/json",
         "X-API-KEY": SIMPLEHASH_API_KEY,
+        'x-service-name': "@nook/api",
       },
     });
     if (!response.ok) {

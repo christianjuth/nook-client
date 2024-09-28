@@ -7,7 +7,11 @@ import { DefaultSidebar } from "@nook/app/features/home/default-sidebar";
 import { getServerSession } from "@nook/app/server/session";
 
 const getActionMetadata = async (url: string) => {
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    headers: {
+      'x-service-name': "@nook/next",
+    }
+  });
   const data = await res.json();
   return data;
 };

@@ -88,6 +88,7 @@ export class ZeroXAPIClient {
         method: "GET",
         headers: {
           "0x-api-key": this.apiKey,
+          'x-service-name': "@nook/swamp-api",
         },
       },
     );
@@ -156,6 +157,7 @@ export class ZeroXAPIClient {
         method: "GET",
         headers: {
           "0x-api-key": this.apiKey,
+          'x-service-name': "@nook/swamp-api",
         },
       },
     );

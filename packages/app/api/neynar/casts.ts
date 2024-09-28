@@ -27,6 +27,7 @@ export async function getTrendingChannels() {
         headers: {
           "Content-Type": "application/json",
           api_key: process.env.NEYNAR_API_KEY as string,
+          'x-service-name': "@nook/app",
         },
       },
     );
@@ -63,6 +64,7 @@ export async function getRecommendedChannels() {
         headers: {
           "Content-Type": "application/json",
           api_key: process.env.NEYNAR_API_KEY as string,
+          'x-service-name': "@nook/app",
         },
       },
     );

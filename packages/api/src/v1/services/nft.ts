@@ -975,6 +975,7 @@ export class NftService {
       headers: {
         accept: "application/json",
         "X-API-KEY": SIMPLEHASH_API_KEY,
+        'x-service-name': "@nook/api",
       },
     });
     if (!response.ok) {
@@ -997,6 +998,7 @@ export class NftService {
       headers: {
         accept: "application/json",
         "X-API-KEY": SIMPLEHASH_API_KEY,
+        'x-service-name': "@nook/api",
       },
     });
     if (!response.ok) {
